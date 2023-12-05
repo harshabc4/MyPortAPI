@@ -10,7 +10,7 @@ const app = express();
 app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 require("dotenv").config();
 
-
+app.use(cors());
 
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
